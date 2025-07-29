@@ -13,20 +13,24 @@ Dieses Projekt implementiert ein einfaches Sprachmodell mit PyTorch. Das Modell 
 - Visualisierung von Verlust- und Perplexitätskurven
 
 ## 📁 Projektstruktur
+```plaintext
 projekt/
-│
 ├── data/
-│ └── language_modeling/
-│ └── <dataset>.txt
+│   └── language_modeling/
+│       └── sanity_check.txt
+│       └── equations.txt
+│       └── motivational_quotes.txt
 │
 ├── experiments/
-│ └── language_modeling/
-│ └── <dataset>-model.pt
+│   └── language_modeling/
+│       └── sanity_check-model.pt
+│       └── equations-model.pt
+│       └── motivational_quotes-model.pt
 │
-├── helper_functions.py
-├── language_model.py
-└── main.py
-
+├── helper_functions.py         # Hilfsfunktionen für Visualisierung & Wortdictionary
+├── language_model.py           # RNN-Modell mit Trainings- und Inferenzlogik
+└── main.py                     # Hauptskript zum Trainieren und Ausführen
+```
 ## 📦 Abhängigkeiten
 - Python 3.8 oder höher
 - PyTorch
@@ -36,8 +40,10 @@ projekt/
 Installiere die Abhängigkeiten mit:
 ```bash
 pip install torch more-itertools matplotlib
-
+```
 ## ⚙️ Konfiguration
 Wähle in main.py den gewünschten Datensatz und Modellierungsmodus:
+```python
 dataset = 'sanity_check'  # oder 'equations', 'motivational_quotes'
 character_level = False   # oder True für Zeichenmodellierung
+```
