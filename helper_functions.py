@@ -1,10 +1,7 @@
 import math
 from textwrap import wrap
 from typing import Dict
-
 import matplotlib.pyplot as plt
-
-
 def make_dictionary(data, unk_threshold: int = 0) -> Dict[str, int]:
     '''
     Makes a dictionary of words given a list of tokenized sentences.
@@ -74,3 +71,4 @@ def plot_loss_curves(loss_train,
     plt.xticks(range(5, math.floor((last_finished_epoch + 1) / 5) * 5, 5))
     plt.savefig(file_name)
     plt.show()
+
